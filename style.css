@@ -74,6 +74,46 @@ a {
 }
 
 /* ===== Sections ===== */
+.snake-typing {
+  font-size: 2.5rem;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffc300;
+  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.snake-typing span {
+  display: inline-block;
+  animation: wave 2s infinite linear;
+}
+
+/* Highlight color for "Team A" */
+.highlight {
+  color: #ffc300; /* or your brand color */
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Wavy snake float animation */
+@keyframes wave {
+  0%   { transform: translateY(0px); }
+  20%  { transform: translateY(-5px); }
+  40%  { transform: translateY(5px); }
+  60%  { transform: translateY(-5px); }
+  80%  { transform: translateY(5px); }
+  100% { transform: translateY(0px); }
+}
+
 section {
   padding: 5rem 2rem;
   background-color: #fff;
@@ -89,6 +129,10 @@ h2 {
 }
 
 /* ===== About & Mission ===== */
+
+.about {
+  text-align: center;
+}
 .text-block {
   margin-bottom: 2rem;
   padding: 2rem;
@@ -236,18 +280,71 @@ blockquote {
   background-color: #ffc300;
 }
 
-/* ===== CTA ===== */
-
-.cta h2 {
-  margin-bottom: 1rem;
-  color: #fff;
-}
+/* ===== CTA Section Final Styling ===== */
 .cta {
-  background-color: #0077b5; /* your main brand color */
+  background-color: #0077b5;
   color: white;
   text-align: center;
   padding: 4rem 2rem;
 }
+
+.cta .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.snake-cta {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffc300;
+  color: #ffc300;
+  margin: 0 auto;
+  display: inline-block;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+}
+
+.snake-cta span {
+  display: inline-block;
+  animation: wave 2s infinite linear;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #0077b5;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #005f94;
+  color: #fff;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes wave {
+  0%   { transform: translateY(0px); }
+  20%  { transform: translateY(-5px); }
+  40%  { transform: translateY(5px); }
+  60%  { transform: translateY(-5px); }
+  80%  { transform: translateY(5px); }
+  100% { transform: translateY(0px); }
+}
+
 
 
 /* ===== Footer ===== */
