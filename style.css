@@ -73,62 +73,29 @@ a {
   background-color: #ff9900;
 }
 
-/* ===== Sections ===== */
-.snake-typing {
+.snake-typing,
+.snake-cta {
   font-size: 2.5rem;
   text-align: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+  animation: floatWave 2s infinite ease-in-out;
+  border: none; /* remove typing cursor */
+  white-space: normal;
+  overflow: visible;
+}
+
+.snake-typing span,
+.snake-cta span {
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #ffc300;
-  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+  animation: floatWave 2s infinite ease-in-out;
 }
 
-.snake-typing span {
-  display: inline-block;
-  animation: wave 2s infinite linear;
-}
-.snake-typing span {
-  display: inline-block;
-}
-
-/* Mobile overrides */
-.desktop-text { display: inline; }
-.mobile-text { display: none; }
-
-@media (max-width: 768px) {
-  .snake-typing {
-    font-size: 1.4rem;
-    animation: typing 3s steps(20, end) forwards, blink 0.75s step-end infinite;
-  }
-
-  .desktop-text { display: none; }
-  .mobile-text { display: inline; }
-}
-
-/* Highlight color for "Team A" */
-.highlight {
-  color: #ffc300; /* or your brand color */
-}
-
-/* Typing effect */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* Wavy snake float animation */
-@keyframes wave {
-  0%   { transform: translateY(0px); }
-  20%  { transform: translateY(-5px); }
-  40%  { transform: translateY(5px); }
-  60%  { transform: translateY(-5px); }
-  80%  { transform: translateY(5px); }
-  100% { transform: translateY(0px); }
+/* Floating Animation */
+@keyframes floatWave {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 section {
@@ -304,34 +271,42 @@ blockquote {
   background-color: #ffc300;
 }
 
-/* ===== CTA Section Final Styling ===== */
-.cta {
-  background-color: #0077b5;
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.cta .container {
+.snake-cta-group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .snake-cta {
   font-size: 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #ffc300;
   color: #ffc300;
-  margin: 0 auto;
+  margin: 0;
   display: inline-block;
-  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  animation: wave 2s infinite ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
 }
 
 .snake-cta span {
   display: inline-block;
-  animation: wave 2s infinite linear;
+  animation: wave 2s infinite ease-in-out;
+}
+.cta .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* ensures vertical alignment */
+  text-align: center;
+}
+.snake-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem; /* Space above button */
 }
 
 .cta-btn {
@@ -341,34 +316,10 @@ blockquote {
   padding: 12px 30px;
   border-radius: 8px;
   font-weight: 600;
-  margin-top: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  margin: 0 auto; /* Ensures button centers in block context */
 }
-
-.cta-btn:hover {
-  background-color: #005f94;
-  color: #fff;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-@keyframes wave {
-  0%   { transform: translateY(0px); }
-  20%  { transform: translateY(-5px); }
-  40%  { transform: translateY(5px); }
-  60%  { transform: translateY(-5px); }
-  80%  { transform: translateY(5px); }
-  100% { transform: translateY(0px); }
-}
-
 
 
 /* ===== Footer ===== */
