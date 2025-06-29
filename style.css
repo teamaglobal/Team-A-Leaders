@@ -88,6 +88,23 @@ a {
   display: inline-block;
   animation: wave 2s infinite linear;
 }
+.snake-typing span {
+  display: inline-block;
+}
+
+/* Mobile overrides */
+.desktop-text { display: inline; }
+.mobile-text { display: none; }
+
+@media (max-width: 768px) {
+  .snake-typing {
+    font-size: 1.4rem;
+    animation: typing 3s steps(20, end) forwards, blink 0.75s step-end infinite;
+  }
+
+  .desktop-text { display: none; }
+  .mobile-text { display: inline; }
+}
 
 /* Highlight color for "Team A" */
 .highlight {
