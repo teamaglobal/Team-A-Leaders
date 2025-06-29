@@ -151,6 +151,13 @@ h2 {
 }
 
 /* ===== Swiper Mission-Vision ===== */
+
+.center-text {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px; /* optional for readability */
+}
+
 .mission-vision .swiper {
   padding: 2rem 0;
 }
